@@ -25,7 +25,7 @@ task('styles', () =>
 		.pipe(browserSync.stream())
 );
 
-task('static', () => src('./src/templates/**/*.*').pipe(dest('dist')));
+task('static', () => src('./src/templates/**/*.[!scss]*').pipe(dest('dist')));
 
 task('demo', () =>
 	src('./src/{templates/**/*.{html,plist},content/*.md}')
