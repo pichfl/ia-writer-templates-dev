@@ -5,6 +5,9 @@
   "author": "Florian Pichler <fp@ylk.gd>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "fix": "eslint **/*.js --fix && prettier **/*.{js,scss,css} --write"
+  },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
     "babel-eslint": "^8.2.1",
