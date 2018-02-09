@@ -1,0 +1,8 @@
+node_modules
+vendor
+bower_components
+dist
+tmp
+public
+typings
+app/ui/components/anfema-logo/logo

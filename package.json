@@ -1,0 +1,32 @@
+{
+  "name": "ia-writer-templates-dev",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "author": "Florian Pichler <fp@ylk.gd>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "babel-eslint": "^8.2.1",
+    "browser-sync": "^2.23.6",
+    "eslint": "^4.17.0",
+    "eslint-config-anfema": "^5.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "fast-plist": "^0.1.2",
+    "gulp": "^4.0.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "handlebars": "^4.0.11",
+    "into-stream": "^3.1.0",
+    "jsdom": "^11.6.2",
+    "prettier": "^1.10.2",
+    "remarkable": "^1.7.1",
+    "through2": "^2.0.3",
+    "vinyl": "^2.1.0"
+  }
+}

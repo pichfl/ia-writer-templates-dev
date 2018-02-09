@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="../{{templateFileName}}/Contents/Resources/style.css" />
+	<title>{{config.CFBundleName}} ({{config.CFBundleShortVersionString}})</title>
+	<script>
+		let titleBody, pageBody;
+
+		addEventListener('DOMContentLoaded', () => {
+			document.querySelector('[data-title]').innerText = '{{config.CFBundleName}} Demo';
+			document.querySelector('[data-author]').innerText = '{{config.IATemplateAuthor}}';
+			// TODO: Render proper date
+			document.querySelector('[data-date]').innerText = 'XX.XX.XX'; 
+			document.querySelector('[data-page-count]').innerText = '42';
+			document.querySelector('[data-page-number]').innerText = '7';
+			document.querySelector('[data-document]').innerHTML = `{{{contents}}}`;
+
+			titleBody = document.getElementById('demo-body-title').innerHTML;
+			pageBody = document.getElementById('demo-body-page').innerHTML;
+
+			document.body.innerHTML = pageBody;
+
+			addToggles();
+		});
+
+		function addToggles() {
+			const toggles = document.createElement('div');
+
+			toggles.innerHTML = `
+				<a href="./index.html">Back</a>
+				<button id="show">Title</button>
+				<button id="nightmode">Night Mode</button>
+				<button id="platform">iOS</button>
+			`;
+
+			toggles.classList.add('___toggles___')
+
+			document.body.className = 'page';
+			document.documentElement.classList.add('mac');
+
+			document.body.append(toggles);
+		}
+
+		window.addEventListener('click', event => {
+				if (event.target.id === 'show') {
+					if (document.body.className === 'title') {
+						document.body.innerHTML = pageBody;
+
+						addToggles();
+
+						document.body.className = 'page';
+						document.getElementById(event.target.id).innerText = 'Title';
+					} else {
+						document.body.innerHTML = titleBody;
+
+						addToggles();
+
+						document.body.className = 'title';
+						document.getElementById(event.target.id).innerText = 'Page';
+					}
+				}
+
+				if (event.target.id === 'nightmode') {
+					document.documentElement.classList.toggle('night-mode');
+
+					event.target.innerText = event.target.innerText === 'Night Mode' ? 'Day Mode' :  'Night Mode';
+				} 
+
+				if (event.target.id === 'platform') {
+					if (document.documentElement.classList.contains('mac')) {
+						document.documentElement.classList.remove('mac');
+						document.documentElement.classList.add('ios');
+						event.target.innerText = 'Mac';
+					} else {
+						document.documentElement.classList.add('mac');
+						document.documentElement.classList.remove('ios');
+						event.target.innerText = 'iOS';
+					}
+				}
+
+			});
+	</script>
+
+	<style>
+		body {
+			position: relative;
+		}
+
+		.___document___ {
+			position: relative;
+			padding: {{config.IATemplateHeaderHeight}}px 0 {{config.IATemplateFooterHeight}}px;
+			min-height: 842px;
+		}
+
+		.___header___ {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+
+		.___footer___ {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
+
+		.___toggles___ {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="demo-body-page">
+		<div class="___header___ {{partials.IATemplateHeaderFile.className}}" style="height:{{config.IATemplateHeaderHeight}}px">
+			{{{partials.IATemplateHeaderFile.html}}}
+		</div>
+
+		<div class="___document___ {{partials.IATemplateDocumentFile.className}}" {{#if partials.IATemplateDocumentFile.hasDocument}}data-document{{/if}}>
+			{{{partials.IATemplateDocumentFile.html}}}
+		</div>
+
+		<div class="__footer___ {{partials.IATemplateFooterFile.className}}" style="height:{{config.IATemplateFooterHeight}}px">
+			{{{partials.IATemplateFooterFile.html}}}
+		</div>
+	</div>
+
+	<div id="demo-body-title">
+		{{{partials.IATemplateTitleFile.html}}}
+	</div>	
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" media="all" href="" />
+</head>
+<body>
+	<ul class="ul--templates">
+		{{#each templates as |template templateName|}}
+			<li><a href="./{{templateName}}.html">{{template.fileName}} </a></li>
+		{{/each}}
+	</ul>
+</body>
+</html>
