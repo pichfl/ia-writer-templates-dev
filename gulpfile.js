@@ -39,8 +39,8 @@ task('server', () => {
 		open: false,
 	});
 
-	watch('./src/styles/**/*.scss', series('styles'));
-	watch('/src/templates/**/*.*').on('change', browserSync.reload);
+	watch('src/styles/**/*.scss', series('styles'));
+	watch('src/{templates/**/*.*,content/*.md}', series('demo')).on('change', browserSync.reload);
 });
 
 task('default', series(parallel('styles', 'static', 'demo'), 'server'));
