@@ -4,8 +4,8 @@ Preview and create your own templates for iA Writer with ease.
 
 ## Requirements
 
-* [Node.js][node]
-* [Gulp][gulp] - `npm install --global gulp-cli`
+-   [Node.js][node]
+-   [Gulp][gulp] - `npm install --global gulp-cli`
 
 ## Setup
 
@@ -34,11 +34,11 @@ Since CSS is not quite made for print, please keep in mind that A4 (210mm by 297
 
 ## Credits
 
-* Kristina for the idea
+-   Kristina for the idea
 
 ## Author
 
-* [Florian Pichler][pichfl] <mailto:fp@ylk.gd>
+-   [Florian Pichler][pichfl]
 
 [node]: https://nodejs.org
 [gulp]: https://gulpjs.com
