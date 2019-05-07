@@ -6,6 +6,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "start": "gulp",
     "fix": "eslint **/*.js --fix && prettier **/*.{js,scss,css} --write"
   },
   "devDependencies": {

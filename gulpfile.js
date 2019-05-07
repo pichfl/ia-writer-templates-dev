@@ -39,7 +39,7 @@ task('server', () => {
 		open: false,
 	});
 
-	watch('src/styles/**/*.scss', series('styles'));
+	watch('src/{styles/**,templates/*/Contents/Resources}/*.scss', series('styles'));
 	watch('src/{templates/**/*.*,content/*.md}', series('demo')).on('change', browserSync.reload);
 });
 
