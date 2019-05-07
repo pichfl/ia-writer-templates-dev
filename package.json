@@ -32,5 +32,9 @@
     "remarkable": "^1.7.1",
     "through2": "^3.0.1",
     "vinyl": "^2.2.0"
+  },
+  "resolutions": {
+    "gulp-sass/node-sass/node-gyp/tar": "^4.4.8",
+    "remarkable/argparse/underscore.string": "^3.3.5"
   }
 }

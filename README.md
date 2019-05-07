@@ -5,13 +5,14 @@ Preview and create your own templates for iA Writer with ease.
 ## Requirements
 
 -   [Node.js][node]
--   [Gulp][gulp] - `npm install --global gulp-cli`
+-   [Yarn][yarn]
+-   [Gulp][gulp] - `yarn --global gulp-cli`
 
 ## Setup
 
 1. Clone or download this repository.
 2. Navigate to the repository in your Terminal.
-3. Run `npm install` to install dependencies.
+3. Run `yarn` to install dependencies.
 4. Run `gulp` to start the development server
 
 ## Development
@@ -41,6 +42,7 @@ Since CSS is not quite made for print, please keep in mind that A4 (210mm by 297
 -   [Florian Pichler][pichfl]
 
 [node]: https://nodejs.org
+[yarn]: https://yarnpkg.comc
 [gulp]: https://gulpjs.com
 [sass]: http://sass-lang.com
 [autoprefixer]: https://github.com/postcss/autoprefixer
