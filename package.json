@@ -27,7 +27,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "handlebars": "^4.5.3",
     "into-stream": "^5.1.0",
-    "jsdom": "^15.0.0",
+    "jsdom": "^16.5.0",
     "prettier": "^1.17.0",
     "remarkable": "^1.7.1",
     "through2": "^3.0.1",
